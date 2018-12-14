@@ -1,5 +1,5 @@
 CC=g++
-TARGET=c24
+TARGET=pc
 OBJECTS=c24_1.o Parent.o Child.o
 INCFLAG = -lstdc++ -std=c++17
 
