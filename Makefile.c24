@@ -1,0 +1,18 @@
+CC=g++
+TARGET=c24
+OBJECTS=c24_1.o Parent.o Child.o
+INCFLAG = -lstdc++ -std=c++17
+
+$(TARGET): $(OBJECTS)
+	@echo "** Linking Executable"
+	$(CC) $(OBJECTS) -o $(TARGET)
+
+clean:
+	@rm -f *.o *~
+
+veryclean: clean
+	@rm -f $(TARGET)
+
+%.o: %.cpp
+	@echo "** Compiling C++ Source"
+	$(CC) -c $(INCFLAG) $< 
